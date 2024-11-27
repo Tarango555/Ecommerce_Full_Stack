@@ -30,6 +30,14 @@ mongoose.connect(DATABASE, {autoIndex: true}).then(()=>{
 
 app.use("/api/v1", router);
 
+//connect Frontend
+app.use(express.static('client/dist'));
+
+//add react frontend routing
+app.get('*', function(req, res){
+    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+});
+
 app.listen(PORT, ()=>{
     console.log(`Server started on port ${PORT}...`);
 });
