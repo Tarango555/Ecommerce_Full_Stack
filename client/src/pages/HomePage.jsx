@@ -9,11 +9,7 @@ import BrandsSkeleton from '../skeleton/BrandsSkeleton.jsx';
 const HomePage = () => {
     return (
         <Layout>
-            <SliderSkeleton />
-            <FeaturesSkeleton />
-            <CategoriesSkeleton />
-            <ProductsSkeleton />
-            <BrandsSkeleton />
+            
         </Layout>
     );
 };
